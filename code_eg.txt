@@ -1,0 +1,31 @@
+hashcat64 -m 8800 -a 3 -D 1 ../hash.txt
+
+hashcat64 -m 2500 -a 3 -D 2 ../abc.hccapx -O
+
+word list md5
+hashcat64 -m 0 -a 0 -D 2 ../hash.txt ../rockyou.txt -O
+
+word list wifi
+===============
+hashcat64 -m 2500 -a 0 -D 2 ../abc.hccapx ../rockyou.txt -O
+
+
+
+
+
+with wordlsit rules wifi
+========================
+hashcat64 -m 2500 -a 0 -D 2 ../abc.hccapx ../rockyou.txt -r rules/fff.rule -O -w 3
+
+
+hashcat -a 3 -m 0 example0.hash ?a?a?a?a?a?a
+
+
+hashcat64 -a 3 -m 2500 -D 2 ../abc.hccapx ?d?d?d?d?d?d?d?d?d?d
+
+
+
+
+
+win10
+hashcat64 -m 5600 -a 3 -D 2 ../hash.txt -O -w 3
